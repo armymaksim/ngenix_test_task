@@ -63,9 +63,9 @@ def parse_xml(xmlstring: str) -> XMLFileStructure:
     )
 
 
-def _parse_vars(vars: List[et.Element]) -> Tuple[str, int]:
+def _parse_vars(var_tags: List[et.Element]) -> Tuple[str, int]:
     attr_id = attr_level = None
-    for var in vars:
+    for var in var_tags:
         if var.get(ATTR_NAME) == ID:
             attr_id = var.get(ATTR_VALUE)
             continue

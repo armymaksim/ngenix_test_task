@@ -1,3 +1,19 @@
+Деплой
+Перед запуском создать каталог "work_dir" в корне проекта
+
+Запуск тестов
+    docker-compose run --rm ngeninx pytest /src
+
+Запуск генерации XML и CSV отчетов
+    docker-compose run --rm ngeninx all_in_one
+
+Можно и по-отдельности
+    docker-compose run --rm ngeninx generate_xml
+    docker-compose run --rm ngeninx create_reports
+
+
+
+
 Написать программу на Python, которая делает следующие действия:
 
 
@@ -24,13 +40,3 @@
 
 Очень желательно сделать так, чтобы задание 2 эффективно использовало ресурсы многоядерного процессора.
 
-
-Запуск тестов
-    docker-compose run --rm ngeninx pytest /src
-
-Запуск генерации XML и CSV отчетов
-    docker-compose run --rm ngeninx all_in_one
-
-Можно и по-отдельности
-    docker-compose run --rm ngeninx generate_xml
-    docker-compose run --rm ngeninx create_reports

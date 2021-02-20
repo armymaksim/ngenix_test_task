@@ -52,7 +52,7 @@ def _cleanup():
 
 
 def _parse_archive(file_path: str):
-    logger.info(f'process_id={os.getpid()}')
+    logger.debug(f'process_id={os.getpid()}')
     result = []
     with ZipFile(file_path, 'r') as zipf:
         for filename in zipf.filelist:
