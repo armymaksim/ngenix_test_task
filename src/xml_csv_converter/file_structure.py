@@ -36,4 +36,3 @@ class XMLFileStructure:
         default_factory=objects_generator,
         init=True
     )
-

@@ -38,12 +38,14 @@ def generate_xml() -> bytes:
         root,
         TAG_OBJECTS
     )
-    for obj_name in  obj.object_names:
+
+    for obj_name in obj.object_names:
         et.SubElement(
             objects,
             TAG_OBJECT,
             {ATTR_NAME: obj_name}
         )
+
     return tostring(root)
 
 
@@ -82,6 +84,3 @@ def _parse_objects(objects: List[et.Element]) -> List[str]:
         el.get(ATTR_NAME)
         for el in objects
     ]
-
-
-
