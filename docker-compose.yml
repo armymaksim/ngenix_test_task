@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  ngeninx:
+    image: ngeninx_test_task_mkozlov
+    build: .
+    container_name: ngeninx_test_task_mkozlov
+    volumes:
+    - ./src:/src
+    - ./work_dir:/tmp
+    command: ["/bin/bash"]
